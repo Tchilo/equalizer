@@ -1,2 +1,168 @@
 @use 'reset' as *;
 @use 'breakpoints' as *;
+@use 'colors' as *;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+
+@mixin buttons($color, $hover) {
+  border-radius: 12px;
+  background: $color;
+  border: none;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  gap: 7.92px;
+  font-size: 18px;
+  padding: 15px 59px;
+
+  &:hover {
+    background: $hover;
+  }
+}
+
+@mixin space {
+  padding: 0 24px;
+
+  @include md {
+    padding: 0 39px;
+  }
+
+  @include xl {
+    padding: 0 165px;
+  }
+}
+
+body {
+  font-family: IBM Plex Sans, sans-serif;
+  background-image: url(../assets/bg-main-mobile.png);
+  background-color: $footer-bg;
+  background-repeat: no-repeat;
+  background-position: 1% -22%;
+}
+
+nav {
+  @include space;
+  padding-top: 39.99px;
+  margin-bottom: 64px;
+  @include md {
+    padding-top: 61.99px;
+  }
+}
+
+.bg {
+  height: 600px;
+  border-radius: 12px;
+  background-image: url(../assets/bg-pattern-2.svg);
+  background-color: $text2-color;
+  background-repeat: no-repeat;
+  background-position: top;
+  
+}
+
+section {
+  h1,
+  h2,
+  .four-dollars {
+    font-weight: 700;
+  }
+
+  p,
+  button {
+    font-weight: 400;
+  }
+
+  .hero__text {
+    @include space;
+    margin-bottom: 200px;
+
+    h1 {
+      font-size: 2.5em;
+      color: $text2-color;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 26px;
+      color: $text2-color;
+    }
+
+  }
+
+  .image {
+    display: flex;
+    justify-content: center;
+
+    img {
+      margin: -130px 0;
+      max-width: 250px
+    }
+  }
+
+  .call-to-action {
+    background: $accent;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 48px 36px;
+    color: $text1-color;
+    z-index: 1;
+    margin: -160px 0 0;
+
+    h2 {
+      line-height: 40px;
+      font-size: 2em;
+    }
+
+    p {
+      line-height: 28px;
+      font-size: 1.125em;
+      margin-bottom: 36px;
+      margin-top: 12px;
+    }
+
+    .price {
+      font-size: 1.25em;
+      margin-bottom: 32px;
+
+      .four-dollars {
+        font-size: 4.0625em;
+        line-height: 52px;
+      }
+    }
+
+    .ios {
+      @include buttons($ios-button, $ios-button-hover);
+      color: $text1-color;
+      margin-bottom: 16px;
+      padding: 15px 77px;
+
+    }
+
+    .android {
+      @include buttons($android-button, $android-button-hover);
+    }
+  }
+
+}
+
+footer {
+  background-color: $footer-bg;
+  padding: 64px 24px;
+
+  p {
+    margin: 32px 0 64px;
+    font-size: 16px;
+    max-width: 296px;
+    line-height: 26px;
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  ul {
+    display: flex;
+    gap: 20px;
+  }
+}
