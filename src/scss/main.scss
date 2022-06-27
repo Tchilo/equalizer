@@ -31,18 +31,37 @@
   }
 }
 
+
 body {
   font-family: IBM Plex Sans, sans-serif;
   background-image: url(../assets/bg-main-mobile.png);
   background-color: $footer-bg;
   background-repeat: no-repeat;
   background-position: 1% -22%;
+
+  @include md {
+    background-image: none;
+    background-image: url(../assets/bg-pattern-1.svg), url(../assets/bg-main-tablet.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 111% -1%, 72% -19%;
+  }
+
+
+  @include lg {
+    background-position: 106% -1%, 72% -19%;
+  }
+
+  @include xl {
+    background-image: url(../assets/bg-pattern-1.svg), url(../assets/bg-main-desktop.png);
+    background-position: 100% -1%, center right;
+  }
 }
 
 nav {
   @include space;
   padding-top: 39.99px;
   margin-bottom: 64px;
+
   @include md {
     padding-top: 61.99px;
   }
@@ -55,10 +74,30 @@ nav {
   background-color: $text2-color;
   background-repeat: no-repeat;
   background-position: top;
-  
+  margin-bottom: 444px;
+
+  @include md {
+    margin-bottom: 115px;
+    background-position-x: center;
+    background-position-y: -60px;
+    margin: 0 39px;
+
+    .max {
+      max-width: 607px;
+      margin: 0 auto;
+    }
+  }
+
+@include xl {
+  background-position-y: -30px;
+  margin: 0 165px;
+
+
+}
 }
 
 section {
+
   h1,
   h2,
   .four-dollars {
@@ -86,6 +125,42 @@ section {
       color: $text2-color;
     }
 
+    @include md {
+      max-width: 534px;
+    }
+
+    // @include md {
+    //   .hero__text {
+    //     width: 66%;
+    //     padding-top: 100px;
+
+    //     h1 {
+    //       font-size: 64px;
+    //       line-height: 64px;
+    //     }
+    //   }
+    // }
+
+    @include xl {
+      // max-width: 770px;
+      width: 100%;
+      max-width: 1192px;
+      margin-bottom: 20%;
+
+
+      h1 {
+        font-size: 88px;
+        line-height: 88px;
+      }
+
+      p {
+        //   max-width: 534px;
+        margin-top: 40px;
+        max-width: 825px;
+        font-size: 20px;
+      }
+    }
+
   }
 
   .image {
@@ -96,6 +171,26 @@ section {
       margin: -130px 0;
       max-width: 250px
     }
+
+    @include md {
+      justify-content: inherit;
+      padding-left: 0;
+
+      img {
+        margin: -106px 0px;
+        max-width: 250px;
+      }
+    }
+@include xl {
+
+  img {
+    // margin: -106px -25px;
+    margin: -203px -86px;
+    width: 312px;
+    max-width: none;
+  }
+}
+
   }
 
   .call-to-action {
@@ -107,7 +202,7 @@ section {
     padding: 48px 36px;
     color: $text1-color;
     z-index: 1;
-    margin: -160px 0 0;
+    margin: 176px 0 0;
 
     h2 {
       line-height: 40px;
@@ -142,6 +237,23 @@ section {
     .android {
       @include buttons($android-button, $android-button-hover);
     }
+
+    @include md {
+      position: absolute;
+      margin: -161px 0 0 161px;
+      width: 399px;
+
+      .max {
+        // max-width: 500px;
+      }
+    }
+
+    @include xl {
+      margin: -57px 0 0 361px;
+      width: 446px;
+      margin-bottom: 80px;
+    }
+
   }
 
 }
@@ -163,6 +275,41 @@ footer {
 
   ul {
     display: flex;
-    gap: 20px;
+    gap: 20px; 
+    
+    img:hover {
+      color: $accent;
+    }
+
+    @include md {
+      align-self: flex-end;
+      margin-bottom: 80px;
+    }
+  }
+
+  @include md {
+    .footer__text {
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        max-width: 303.4px;
+      }
+    }
+
+  }
+
+  @include xl {
+    // margin-top: 87px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 150px  165px 0;
+
+  
+
+    .footer__text {
+      gap: 700px;
+}
   }
 }

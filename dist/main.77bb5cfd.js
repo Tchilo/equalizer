@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../assets/bg-main-mobile.png":[["bg-main-mobile.fd5e92c5.png","assets/bg-main-mobile.png"],"assets/bg-main-mobile.png"],"./../assets/bg-pattern-2.svg":[["bg-pattern-2.12daf264.svg","assets/bg-pattern-2.svg"],"assets/bg-pattern-2.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./../assets/bg-main-mobile.png":[["bg-main-mobile.fd5e92c5.png","assets/bg-main-mobile.png"],"assets/bg-main-mobile.png"],"./../assets/bg-pattern-1.svg":[["bg-pattern-1.23b175be.svg","assets/bg-pattern-1.svg"],"assets/bg-pattern-1.svg"],"./../assets/bg-main-tablet.png":[["bg-main-tablet.5b2c4ea6.png","assets/bg-main-tablet.png"],"assets/bg-main-tablet.png"],"./../assets/bg-main-desktop.png":[["bg-main-desktop.9bdf39bb.png","assets/bg-main-desktop.png"],"assets/bg-main-desktop.png"],"./../assets/bg-pattern-2.svg":[["bg-pattern-2.12daf264.svg","assets/bg-pattern-2.svg"],"assets/bg-pattern-2.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42715" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44903" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
