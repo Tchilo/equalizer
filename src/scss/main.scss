@@ -32,6 +32,7 @@
 }
 
 
+
 body {
   font-family: IBM Plex Sans, sans-serif;
   background-image: url(../assets/bg-main-mobile.png);
@@ -53,7 +54,7 @@ body {
 
   @include xl {
     background-image: url(../assets/bg-pattern-1.svg), url(../assets/bg-main-desktop.png);
-    background-position: 100% -1%, center right;
+    background-position: 100% -1%,  70% 105%
   }
 }
 
@@ -88,12 +89,12 @@ nav {
     }
   }
 
-@include xl {
-  background-position-y: -30px;
-  margin: 0 165px;
+  @include xl {
+    background-position-y: -30px;
+    margin: 0 165px;
 
 
-}
+  }
 }
 
 section {
@@ -181,15 +182,16 @@ section {
         max-width: 250px;
       }
     }
-@include xl {
 
-  img {
-    // margin: -106px -25px;
-    margin: -203px -86px;
-    width: 312px;
-    max-width: none;
-  }
-}
+    @include xl {
+
+      img {
+        // margin: -106px -25px;
+        margin: -203px -86px;
+        width: 312px;
+        max-width: none;
+      }
+    }
 
   }
 
@@ -259,7 +261,6 @@ section {
 }
 
 footer {
-  background-color: $footer-bg;
   padding: 64px 24px;
 
   p {
@@ -275,10 +276,13 @@ footer {
 
   ul {
     display: flex;
-    gap: 20px; 
-    
-    img:hover {
-      color: $accent;
+    gap: 20px;
+
+
+
+    svg:hover {
+      filter: invert(57%) sepia(39%) saturate(4276%) hue-rotate(331deg) brightness(113%) contrast(96%);
+      cursor: pointer;
     }
 
     @include md {
@@ -288,6 +292,8 @@ footer {
   }
 
   @include md {
+    padding: 200px 39px 0;
+
     .footer__text {
       display: flex;
       justify-content: space-between;
@@ -304,12 +310,12 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 150px  165px 0;
+    padding: 150px 165px 0;
 
-  
+
 
     .footer__text {
-      gap: 700px;
-}
+      gap: 353px;
+    }
   }
 }

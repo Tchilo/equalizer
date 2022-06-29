@@ -64,7 +64,7 @@ body {
 @media (min-width: 1440px) {
   body {
     background-image: url(/bg-pattern-1.23b175be.svg), url(/bg-main-desktop.9bdf39bb.png);
-    background-position: 100% -1%, center right;
+    background-position: 100% -1%, 70% 105%;
   }
 }
 
@@ -272,7 +272,6 @@ section .call-to-action .android:hover {
 }
 
 footer {
-  background-color: #FCFAF9;
   padding: 64px 24px;
 }
 footer p {
@@ -288,8 +287,9 @@ footer ul {
   display: flex;
   gap: 20px;
 }
-footer ul img:hover {
-  color: #FA7453;
+footer ul svg:hover {
+  filter: invert(57%) sepia(39%) saturate(4276%) hue-rotate(331deg) brightness(113%) contrast(96%);
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   footer ul {
@@ -298,6 +298,9 @@ footer ul img:hover {
   }
 }
 @media (min-width: 768px) {
+  footer {
+    padding: 200px 39px 0;
+  }
   footer .footer__text {
     display: flex;
     justify-content: space-between;
@@ -314,7 +317,7 @@ footer ul img:hover {
     padding: 150px 165px 0;
   }
   footer .footer__text {
-    gap: 700px;
+    gap: 353px;
   }
 }
 
