@@ -7,7 +7,7 @@
 - Parcel
 
 ## See Live 
-[click here!](https://skill-elearning.netlify.app/)
+[click here!](https://equalizer-delta.vercel.app/
 
 ## Screenshots
 > | Phone | Tablet |
